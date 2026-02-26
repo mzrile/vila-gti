@@ -58,7 +58,7 @@ const HeroSection = () => {
             href="#galerija"
             className="glass px-8 py-4 rounded-lg text-primary-foreground font-body tracking-wide uppercase text-sm hover:bg-primary-foreground/10 transition-colors"
           >
-            Pogledaj galeriju
+            Naše slike
           </a>
         </motion.div>
       </div>

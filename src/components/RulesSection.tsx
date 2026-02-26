@@ -5,7 +5,7 @@ const rules = [
   "U kući je dozvoljeno pušenje u svim prostorijama osim u spavaćim sobama.",
   "Glasna glazba izvan kuće dozvoljena je (u kontroliranim uvjetima) do 22 h zbog kućnog reda.",
   "Jedino ozvučenje koje je dozvoljeno koristiti je naše koje se nalazi u kući.",
-  "Nije dozvoljena muzika uživo — tamburaši, harmonikaši, DJ i sl.",
+  "___SPECIAL___Nije dozvoljena muzika uživo — tamburaši, harmonikaši, DJ i sl.!!!",
   "Upotreba vatrenog oružja, vatrometa ili petardi je strogo zabranjena. Zabranjeno je ispucavanje konfeta ili korištenje balona s konfetima.",
   "Kuću ne iznajmljujemo osobama mlađima od 23. godine.",
   "Maksimalan broj ljudi koji može biti na kući je 15, bez obzira koliko će osoba prespavati.",
@@ -31,20 +31,24 @@ const RulesSection = () => {
         </motion.div>
 
         <div className="space-y-4">
-          {rules.map((rule, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, x: -20 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="flex gap-4 items-start bg-card rounded-xl p-5 border border-border"
-            >
-              <span className="gold-gradient text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center text-sm font-body font-bold shrink-0">
-                {i + 1}
-              </span>
-              <p className="text-foreground/80 font-body text-sm leading-relaxed">{rule}</p>
-            </motion.div>
-          ))}
+          {rules.map((rule, i) => {
+            const isSpecial = rule.startsWith("___SPECIAL___");
+            const text = isSpecial ? rule.replace("___SPECIAL___", "") : rule;
+            return (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.4, delay: i * 0.08 }}
+                className={`flex gap-4 items-start rounded-xl p-5 border ${isSpecial ? "bg-destructive/10 border-destructive/30" : "bg-card border-border"}`}
+              >
+                <span className="gold-gradient text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center text-sm font-body font-bold shrink-0">
+                  {i + 1}
+                </span>
+                <p className={`font-body text-sm leading-relaxed ${isSpecial ? "font-bold underline text-destructive" : "text-foreground/80"}`}>{text}</p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
