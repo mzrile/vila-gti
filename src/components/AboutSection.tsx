@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { Waves, Flame, BedDouble, Beef, Car, Droplets } from "lucide-react";
 
 const features = [
-  { icon: "🏊", label: "Veliki bazen" },
-  { icon: "🛁", label: "Jacuzzi" },
-  { icon: "🧖", label: "Sauna" },
-  { icon: "🛏️", label: "5 spavaćih soba" },
-  { icon: "🍖", label: "Roštilj & sjenica" },
-  { icon: "🚗", label: "Parking za 8 vozila" },
+  { icon: Droplets, label: "Veliki bazen" },
+  { icon: Waves, label: "Jacuzzi" },
+  { icon: Flame, label: "Sauna" },
+  { icon: BedDouble, label: "5 spavaćih soba" },
+  { icon: Beef, label: "Roštilj & sjenica" },
+  { icon: Car, label: "Parking za 8 vozila" },
 ];
 
 const AboutSection = () => {
@@ -26,7 +27,7 @@ const AboutSection = () => {
         >
           <p className="text-primary tracking-[0.3em] uppercase text-sm mb-3 font-body">O vili</p>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Vaš privatni <span className="text-gold-gradient italic">raj</span> u blizini Zagreba
+            Vaš privatni <span className="text-gold-gradient italic">raj</span> u Zagrebu
           </h2>
           <p className="text-muted-foreground font-body text-lg max-w-3xl mx-auto leading-relaxed">
             Vila GTI smještena je u mirnom okruženju Dubrave, na adresi Ivanovićeva 47b, Zagreb.
@@ -44,7 +45,7 @@ const AboutSection = () => {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="bg-card rounded-xl p-6 text-center border border-border hover:border-primary/30 transition-colors"
             >
-              <span className="text-4xl mb-3 block">{f.icon}</span>
+              <f.icon className="w-10 h-10 text-primary mx-auto mb-3" />
               <span className="font-body font-bold text-foreground">{f.label}</span>
             </motion.div>
           ))}
@@ -56,7 +57,7 @@ const AboutSection = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mt-12 bg-secondary text-secondary-foreground rounded-2xl p-8 md:p-12"
         >
-          <h3 className="font-display text-2xl font-bold mb-4">Što vas čeka?</h3>
+          <h3 className="font-display text-2xl font-bold mb-4">Što nudimo našim gostima?</h3>
           <div className="grid md:grid-cols-2 gap-4 text-secondary-foreground/80 font-body">
             <ul className="space-y-2">
               <li>✓ Kompletno opremljena kuhinja</li>

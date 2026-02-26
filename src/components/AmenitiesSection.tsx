@@ -4,7 +4,7 @@ import { useRef } from "react";
 const amenities = [
   { icon: "🏊‍♂️", title: "Bazen", desc: "Veliki vanjski bazen za osvježenje i zabavu" },
   { icon: "💆", title: "Jacuzzi", desc: "Opuštanje u toploj vodi pod zvijezdama" },
-  { icon: "🧖‍♀️", title: "Sauna", desc: "Finska sauna za potpunu relaksaciju" },
+  { icon: "🧖‍♀️", title: "Sauna", desc: "Sauna za potpunu relaksaciju" },
   { icon: "🥩", title: "Roštilj", desc: "Prostrani roštilj sa sjenicom" },
   { icon: "🎱", title: "Biljar", desc: "Za zabavu i natjecanje u društvu" },
   { icon: "🎯", title: "Pikado", desc: "Klasična igra za sve generacije" },

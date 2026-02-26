@@ -14,9 +14,8 @@ const PricingSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <p className="text-primary tracking-[0.3em] uppercase text-sm mb-3 font-body">Cijene</p>
-          <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground">
-            Transparentne <span className="text-gold-gradient italic">cijene</span>
+          <h2 className="font-display text-4xl md:text-6xl font-bold text-foreground">
+            <span className="text-gold-gradient italic">Cijene</span>
           </h2>
         </motion.div>
 
