@@ -1,19 +1,29 @@
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
 import galleryVillaFront from "@/assets/gallery-villa-front.jpg";
-import galleryPool from "@/assets/gallery-pool.jpg";
-import galleryTerrace from "@/assets/gallery-terrace.jpg";
-import galleryJacuzzi from "@/assets/gallery-jacuzzi.jpg";
-import galleryBedroom from "@/assets/gallery-bedroom.jpg";
-import galleryKitchen from "@/assets/gallery-kitchen.jpg";
+import galleryExterior2 from "@/assets/gallery-exterior2.jpg";
+import galleryYard from "@/assets/gallery-yard.jpg";
+import galleryPoolNight from "@/assets/gallery-pool-night.jpeg";
+import galleryGarden from "@/assets/gallery-garden.jpeg";
+import galleryGazebo from "@/assets/gallery-gazebo.jpg";
+import galleryLivingroom from "@/assets/gallery-livingroom.jpeg";
+import gallerySauna from "@/assets/gallery-sauna.jpeg";
+import gallerySauna2 from "@/assets/gallery-sauna2.jpeg";
+import galleryBathroom from "@/assets/gallery-bathroom.jpeg";
+import galleryBedroom from "@/assets/gallery-bedroom-real.jpeg";
 
 const images = [
   { src: galleryVillaFront, alt: "Vila GTI - pročelje" },
-  { src: galleryPool, alt: "Bazen noću" },
-  { src: galleryTerrace, alt: "Terasa s roštiljem" },
-  { src: galleryJacuzzi, alt: "Jacuzzi i sauna" },
+  { src: galleryPoolNight, alt: "Bazen noću s rasvjetom" },
+  { src: galleryExterior2, alt: "Vila GTI - eksterijer" },
+  { src: galleryYard, alt: "Dvorište i zelena površina" },
+  { src: galleryGarden, alt: "Vrt s rasvjetom" },
+  { src: galleryGazebo, alt: "Sjenica s roštiljem" },
+  { src: galleryLivingroom, alt: "Dnevna soba" },
+  { src: gallerySauna, alt: "Sauna" },
+  { src: gallerySauna2, alt: "Sauna - unutrašnjost" },
+  { src: galleryBathroom, alt: "Kupaona s tušem i kadom" },
   { src: galleryBedroom, alt: "Spavaća soba" },
-  { src: galleryKitchen, alt: "Opremljena kuhinja" },
 ];
 
 const GallerySection = () => {
