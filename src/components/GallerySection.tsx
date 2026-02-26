@@ -10,7 +10,10 @@ import galleryLivingroom from "@/assets/gallery-livingroom.jpeg";
 import gallerySauna from "@/assets/gallery-sauna.jpeg";
 import gallerySauna2 from "@/assets/gallery-sauna2.jpeg";
 import galleryBathroom from "@/assets/gallery-bathroom.jpeg";
-import galleryBedroom from "@/assets/gallery-bedroom-real.jpeg";
+import galleryBedroomLavender from "@/assets/gallery-bedroom-lavender.jpeg";
+import galleryBedroomSunset from "@/assets/gallery-bedroom-sunset.jpeg";
+import galleryBedroomFuji from "@/assets/gallery-bedroom-fuji.jpeg";
+import galleryBedroomBlue from "@/assets/gallery-bedroom-blue.jpeg";
 
 const images = [
   { src: galleryVillaFront, alt: "Vila GTI - pročelje" },
@@ -23,7 +26,10 @@ const images = [
   { src: gallerySauna, alt: "Sauna" },
   { src: gallerySauna2, alt: "Sauna - unutrašnjost" },
   { src: galleryBathroom, alt: "Kupaona s tušem i kadom" },
-  { src: galleryBedroom, alt: "Spavaća soba" },
+  { src: galleryBedroomLavender, alt: "Spavaća soba s motivom lavande" },
+  { src: galleryBedroomSunset, alt: "Spavaća soba s motivom zalaska sunca" },
+  { src: galleryBedroomFuji, alt: "Spavaća soba s motivom planine Fuji" },
+  { src: galleryBedroomBlue, alt: "Spavaća soba s plavim detaljima" },
 ];
 
 const GallerySection = () => {
