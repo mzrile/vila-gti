@@ -54,7 +54,19 @@ const ContactSection = () => {
           className="border-t border-secondary-foreground/10 pt-8"
         >
           <p className="text-secondary-foreground/50 font-body text-sm mb-1">📍 Ivanovićeva 47b, Dubrava, Zagreb</p>
-          <p className="text-secondary-foreground/50 font-body text-sm">📞 091 572 1136 — Mobitel & WhatsApp</p>
+          <p className="text-secondary-foreground/50 font-body text-sm mb-8">📞 091 572 1136 — Mobitel & WhatsApp</p>
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d3324.375190033259!2d16.047900376647004!3d45.868300406385316!2m2!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d8694b38081b%3A0x183b7852621c75f8!2sIvanovi%C4%87eva%20ul.%2047B%2C%2010000%2C%20Zagreb!5e1!3m2!1sen!2shr!4v1772119068875!5m2!1sen!2shr"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Lokacija Vila GTI"
+            />
+          </div>
         </motion.div>
       </div>
     </section>
