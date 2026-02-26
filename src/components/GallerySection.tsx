@@ -1,14 +1,14 @@
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
+import galleryVillaFront from "@/assets/gallery-villa-front.jpg";
 import galleryPool from "@/assets/gallery-pool.jpg";
 import galleryTerrace from "@/assets/gallery-terrace.jpg";
 import galleryJacuzzi from "@/assets/gallery-jacuzzi.jpg";
 import galleryBedroom from "@/assets/gallery-bedroom.jpg";
 import galleryKitchen from "@/assets/gallery-kitchen.jpg";
-import heroVilla from "@/assets/hero-villa.jpg";
 
 const images = [
-  { src: heroVilla, alt: "Vila s bazenom - eksterijer" },
+  { src: galleryVillaFront, alt: "Vila GTI - pročelje" },
   { src: galleryPool, alt: "Bazen noću" },
   { src: galleryTerrace, alt: "Terasa s roštiljem" },
   { src: galleryJacuzzi, alt: "Jacuzzi i sauna" },
