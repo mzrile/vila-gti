@@ -1,19 +1,21 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { Droplets, Waves, Flame, Beef, CircleDot, Target, Trophy, Volume2, Thermometer, CookingPot, Car, TreePalm } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
-const amenities = [
-  { icon: "🏊‍♂️", title: "Bazen", desc: "Veliki vanjski bazen za osvježenje i zabavu" },
-  { icon: "💆", title: "Jacuzzi", desc: "Opuštanje u toploj vodi pod zvijezdama" },
-  { icon: "🧖‍♀️", title: "Sauna", desc: "Sauna za potpunu relaksaciju" },
-  { icon: "🥩", title: "Roštilj", desc: "Prostrani roštilj sa sjenicom" },
-  { icon: "🎱", title: "Biljar", desc: "Za zabavu i natjecanje u društvu" },
-  { icon: "🎯", title: "Pikado", desc: "Klasična igra za sve generacije" },
-  { icon: "⚽", title: "Stolni nogomet", desc: "Turnir za zabavu cijele ekipe" },
-  { icon: "🔊", title: "Ozvučenje", desc: "Kvalitetno ozvučenje za atmosferu" },
-  { icon: "❄️", title: "Klima / Grijanje", desc: "Ugodna temperatura cijele godine" },
-  { icon: "🍳", title: "Kuhinja", desc: "Potpuno opremljena za pripremu jela" },
-  { icon: "🚗", title: "Parking", desc: "Privatni parking za 8 vozila" },
-  { icon: "🌿", title: "Dvorište", desc: "Veliko privatno dvorište s terasom" },
+const amenities: { Icon: LucideIcon; title: string; desc: string }[] = [
+  { Icon: Droplets, title: "Bazen", desc: "Veliki vanjski bazen za osvježenje i zabavu" },
+  { Icon: Waves, title: "Jacuzzi", desc: "Opuštanje u toploj vodi pod zvijezdama" },
+  { Icon: Flame, title: "Sauna", desc: "Sauna za potpunu relaksaciju" },
+  { Icon: Beef, title: "Roštilj", desc: "Prostrani roštilj sa sjenicom" },
+  { Icon: CircleDot, title: "Biljar", desc: "Za zabavu i natjecanje u društvu" },
+  { Icon: Target, title: "Pikado", desc: "Klasična igra za sve generacije" },
+  { Icon: Trophy, title: "Stolni nogomet", desc: "Turnir za zabavu cijele ekipe" },
+  { Icon: Volume2, title: "Ozvučenje", desc: "Kvalitetno ozvučenje za atmosferu" },
+  { Icon: Thermometer, title: "Klima / Grijanje", desc: "Ugodna temperatura cijele godine" },
+  { Icon: CookingPot, title: "Kuhinja", desc: "Potpuno opremljena za pripremu jela" },
+  { Icon: Car, title: "Parking", desc: "Privatni parking za 8 vozila" },
+  { Icon: TreePalm, title: "Dvorište", desc: "Veliko privatno dvorište s terasom" },
 ];
 
 const AmenitiesSection = () => {
@@ -44,7 +46,7 @@ const AmenitiesSection = () => {
               transition={{ duration: 0.4, delay: i * 0.05 }}
               className="bg-background rounded-xl p-5 text-center hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 border border-border hover:border-primary/20"
             >
-              <span className="text-3xl mb-2 block">{a.icon}</span>
+              <a.Icon className="w-8 h-8 text-primary mx-auto mb-2" />
               <h3 className="font-display font-bold text-foreground text-sm mb-1">{a.title}</h3>
               <p className="text-muted-foreground text-xs font-body">{a.desc}</p>
             </motion.div>
