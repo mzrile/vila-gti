@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Waves, Flame, BedDouble, Beef, Car, Droplets } from "lucide-react";
+import { Flame, BedDouble, Beef, Car, Droplets } from "lucide-react";
 
 const features = [
   { icon: Droplets, label: "Veliki bazen" },
-  { icon: Waves, label: "Jacuzzi" },
+  
   { icon: Flame, label: "Sauna" },
   { icon: BedDouble, label: "5 spavaćih soba" },
   { icon: Beef, label: "Roštilj & sjenica" },

@@ -36,7 +36,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-lg md:text-xl text-primary-foreground/80 font-body font-light max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Privatna vila s bazenom, jacuzzijem i saunom za do 15 osoba.
+          Privatna vila s bazenom i saunom za do 15 osoba.
           Idealno za rođendane, djevojačke večeri, team building i opuštajući vikend.
         </motion.p>
 
