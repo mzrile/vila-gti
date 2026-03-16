@@ -5,11 +5,11 @@ import { Flame, BedDouble, Beef, Car, Droplets, TreePalm } from "lucide-react";
 
 const features = [
   { icon: Droplets, label: "Veliki bazen" },
-  
   { icon: Flame, label: "Sauna" },
   { icon: BedDouble, label: "5 spavaćih soba" },
   { icon: Beef, label: "Roštilj & sjenica" },
   { icon: Car, label: "Parking za 8 vozila" },
+  { icon: TreePalm, label: "Veliko dvorište" },
 ];
 
 const AboutSection = () => {
