@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Droplets, Flame, Beef, CircleDot, Target, Trophy, Volume2, Thermometer, CookingPot, Car, TreePalm } from "lucide-react";
+import { Droplets, Flame, Beef, CircleDot, Target, Trophy, Volume2, Thermometer, CookingPot, Car } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 const amenities: { Icon: LucideIcon; title: string; desc: string }[] = [
@@ -15,7 +15,6 @@ const amenities: { Icon: LucideIcon; title: string; desc: string }[] = [
   { Icon: Thermometer, title: "Klima / Grijanje", desc: "Ugodna temperatura cijele godine" },
   { Icon: CookingPot, title: "Kuhinja", desc: "Potpuno opremljena za pripremu jela" },
   { Icon: Car, title: "Parking", desc: "Privatni parking za 8 vozila" },
-  { Icon: TreePalm, title: "Dvorište", desc: "Veliko privatno dvorište s terasom" },
 ];
 
 const AmenitiesSection = () => {
