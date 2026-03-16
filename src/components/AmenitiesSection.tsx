@@ -5,7 +5,7 @@ import type { LucideIcon } from "lucide-react";
 
 const amenities: { Icon: LucideIcon; title: string; desc: string }[] = [
   { Icon: Droplets, title: "Bazen", desc: "Veliki vanjski bazen za osvježenje i zabavu" },
-  { Icon: Waves, title: "Jacuzzi", desc: "Opuštanje u toploj vodi pod zvijezdama" },
+  
   { Icon: Flame, title: "Sauna", desc: "Sauna za potpunu relaksaciju" },
   { Icon: Beef, title: "Roštilj", desc: "Prostrani roštilj sa sjenicom" },
   { Icon: CircleDot, title: "Biljar", desc: "Za zabavu i natjecanje u društvu" },
