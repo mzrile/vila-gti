@@ -15,7 +15,6 @@ const amenities: { Icon: LucideIcon; title: string; desc: string }[] = [
   { Icon: Thermometer, title: "Klima / Grijanje", desc: "Ugodna temperatura cijele godine" },
   { Icon: CookingPot, title: "Kuhinja", desc: "Potpuno opremljena za pripremu jela" },
   { Icon: Car, title: "Parking", desc: "Privatni parking za 8 vozila" },
-  { Icon: TreePalm, title: "Dvorište", desc: "Veliko privatno dvorište s terasom" },
 ];
 
 const AmenitiesSection = () => {
