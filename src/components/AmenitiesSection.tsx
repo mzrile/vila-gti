@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Droplets, Flame, Beef, CircleDot, Target, Trophy, Volume2, Thermometer, CookingPot, Car, TreePalm } from "lucide-react";
+import { Droplets, Flame, Beef, CircleDot, Target, Trophy, Volume2, Thermometer, CookingPot, Car } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 const amenities: { Icon: LucideIcon; title: string; desc: string }[] = [

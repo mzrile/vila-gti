@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Flame, BedDouble, Beef, Car, Droplets } from "lucide-react";
+import { Flame, BedDouble, Beef, Car, Droplets, TreePalm } from "lucide-react";
 
 const features = [
   { icon: Droplets, label: "Veliki bazen" },
