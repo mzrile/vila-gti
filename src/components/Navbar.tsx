@@ -1,18 +1,21 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-
-const links = [
-  { href: "#o-vili", label: "O vili" },
-  { href: "#sadrzaji", label: "Sadržaji" },
-  { href: "#galerija", label: "Galerija" },
-  { href: "#cijene", label: "Cijene" },
-  { href: "#pravila", label: "Pravila" },
-  { href: "#kontakt", label: "Kontakt" },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { lang, setLang, t } = useLanguage();
+  const nav = t.nav[lang];
+
+  const links = [
+    { href: "#o-vili", label: nav.about },
+    { href: "#sadrzaji", label: nav.amenities },
+    { href: "#galerija", label: nav.gallery },
+    { href: "#cijene", label: nav.pricing },
+    { href: "#pravila", label: nav.rules },
+    { href: "#kontakt", label: nav.contact },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -43,28 +46,64 @@ const Navbar = () => {
           ))}
         </div>
 
-        <a
-          href="https://www.booking.com/hotel/hr/vila-s-bazenom-deluxe-gti.hr.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:block gold-gradient px-5 py-2 rounded-lg text-primary-foreground font-body font-bold tracking-wide uppercase text-xs hover:opacity-90 transition-opacity"
-        >
-          Rezerviraj
-        </a>
+        <div className="hidden md:flex items-center gap-3">
+          {/* Language flags */}
+          <div className="flex items-center gap-1.5 mr-2">
+            <button
+              onClick={() => setLang("hr")}
+              className={`text-lg leading-none rounded-sm overflow-hidden transition-opacity ${lang === "hr" ? "opacity-100 ring-1 ring-primary-foreground/50" : "opacity-50 hover:opacity-80"}`}
+              title="Hrvatski"
+            >
+              🇭🇷
+            </button>
+            <button
+              onClick={() => setLang("en")}
+              className={`text-lg leading-none rounded-sm overflow-hidden transition-opacity ${lang === "en" ? "opacity-100 ring-1 ring-primary-foreground/50" : "opacity-50 hover:opacity-80"}`}
+              title="English"
+            >
+              🇬🇧
+            </button>
+          </div>
+
+          <a
+            href="https://www.booking.com/hotel/hr/vila-s-bazenom-deluxe-gti.hr.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="gold-gradient px-5 py-2 rounded-lg text-primary-foreground font-body font-bold tracking-wide uppercase text-xs hover:opacity-90 transition-opacity"
+          >
+            {nav.book}
+          </a>
+        </div>
 
         {/* Mobile toggle */}
-        <button
-          className="md:hidden text-primary-foreground"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            {menuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
-        </button>
+        <div className="md:hidden flex items-center gap-3">
+          <div className="flex items-center gap-1.5">
+            <button
+              onClick={() => setLang("hr")}
+              className={`text-lg leading-none transition-opacity ${lang === "hr" ? "opacity-100" : "opacity-50"}`}
+            >
+              🇭🇷
+            </button>
+            <button
+              onClick={() => setLang("en")}
+              className={`text-lg leading-none transition-opacity ${lang === "en" ? "opacity-100" : "opacity-50"}`}
+            >
+              🇬🇧
+            </button>
+          </div>
+          <button
+            className="text-primary-foreground"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {menuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
@@ -90,7 +129,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="block mt-4 gold-gradient px-5 py-3 rounded-lg text-primary-foreground font-body font-bold tracking-wide uppercase text-xs text-center"
           >
-            Rezerviraj
+            {nav.book}
           </a>
         </motion.div>
       )}
