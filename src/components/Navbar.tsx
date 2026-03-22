@@ -89,15 +89,25 @@ const Navbar = () => {
           <div className="flex items-center gap-1.5">
             <button
               onClick={() => setLang("hr")}
-              className={`text-lg leading-none transition-opacity ${lang === "hr" ? "opacity-100" : "opacity-50"}`}
+              className={`w-6 h-4 rounded-sm overflow-hidden border transition-opacity ${lang === "hr" ? "opacity-100 border-primary-foreground/60" : "opacity-50 border-transparent"}`}
             >
-              🇭🇷
+              <svg viewBox="0 0 640 480" className="w-full h-full">
+                <rect width="640" height="160" fill="#ff0000" />
+                <rect y="160" width="640" height="160" fill="#ffffff" />
+                <rect y="320" width="640" height="160" fill="#171796" />
+              </svg>
             </button>
             <button
               onClick={() => setLang("en")}
-              className={`text-lg leading-none transition-opacity ${lang === "en" ? "opacity-100" : "opacity-50"}`}
+              className={`w-6 h-4 rounded-sm overflow-hidden border transition-opacity ${lang === "en" ? "opacity-100 border-primary-foreground/60" : "opacity-50 border-transparent"}`}
             >
-              🇬🇧
+              <svg viewBox="0 0 640 480" className="w-full h-full">
+                <rect width="640" height="480" fill="#012169" />
+                <path d="M75 0l244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z" fill="#fff" />
+                <path d="M424 281l216 159v40L369 281h55zm-184 20l6 35L54 480H0l240-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z" fill="#C8102E" />
+                <path d="M241 0v480h160V0H241zM0 160v160h640V160H0z" fill="#fff" />
+                <path d="M273 0v480h96V0h-96zM0 192v96h640v-96H0z" fill="#C8102E" />
+              </svg>
             </button>
           </div>
           <button
