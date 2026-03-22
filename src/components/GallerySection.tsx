@@ -17,20 +17,20 @@ import galleryBedroomFuji from "@/assets/gallery-bedroom-fuji.jpeg";
 import galleryBedroomBlue from "@/assets/gallery-bedroom-blue.jpeg";
 
 const images = [
-  { src: galleryVillaFront, alt: { hr: "Vila GTI - pročelje", en: "Villa GTI - front" } },
-  { src: galleryPoolNight, alt: { hr: "Bazen noću s rasvjetom", en: "Pool at night with lighting" } },
-  { src: galleryExterior2, alt: { hr: "Vila GTI - eksterijer", en: "Villa GTI - exterior" } },
-  { src: galleryYard, alt: { hr: "Dvorište i zelena površina", en: "Yard and green area" } },
-  { src: galleryGarden, alt: { hr: "Vrt s rasvjetom", en: "Garden with lighting" } },
-  { src: galleryGazebo, alt: { hr: "Sjenica s roštiljem", en: "Gazebo with BBQ" } },
-  { src: galleryLivingroom, alt: { hr: "Dnevna soba", en: "Living room" } },
-  { src: gallerySauna, alt: { hr: "Sauna", en: "Sauna" } },
-  { src: gallerySauna2, alt: { hr: "Sauna - unutrašnjost", en: "Sauna - interior" } },
-  { src: galleryBathroom, alt: { hr: "Kupaona s tušem i kadom", en: "Bathroom with shower and tub" } },
-  { src: galleryBedroomLavender, alt: { hr: "Spavaća soba s motivom lavande", en: "Lavender-themed bedroom" } },
-  { src: galleryBedroomSunset, alt: { hr: "Spavaća soba s motivom zalaska sunca", en: "Sunset-themed bedroom" } },
-  { src: galleryBedroomFuji, alt: { hr: "Spavaća soba s motivom planine Fuji", en: "Fuji-themed bedroom" } },
-  { src: galleryBedroomBlue, alt: { hr: "Spavaća soba s plavim detaljima", en: "Blue-themed bedroom" } },
+  { src: galleryVillaFront, alt: { hr: "Kuća za proslave najam Zagreb – pročelje vile s bazenom", en: "Party house rental Zagreb – villa front view with pool" } },
+  { src: galleryPoolNight, alt: { hr: "Najam kuće za proslave – bazen noću s rasvjetom", en: "Event house rental – pool at night with lighting" } },
+  { src: galleryExterior2, alt: { hr: "Kuća za zabave najam – eksterijer vile GTI Zagreb", en: "House rental Zagreb – villa GTI exterior" } },
+  { src: galleryYard, alt: { hr: "Najam prostora za proslave – veliko dvorište vile", en: "Party house Zagreb – large villa yard" } },
+  { src: galleryGarden, alt: { hr: "Kuća za evente najam – vrt s rasvjetom", en: "Event house rental – garden with lighting" } },
+  { src: galleryGazebo, alt: { hr: "Najam kuće za rođendan – sjenica s roštiljem", en: "Party house rental – gazebo with BBQ area" } },
+  { src: galleryLivingroom, alt: { hr: "Kuća za proslave okolica Zagreba – prostrana dnevna soba", en: "House rental Zagreb – spacious living room" } },
+  { src: gallerySauna, alt: { hr: "Najam kuće za momačku – sauna za relaksaciju", en: "Party house rental Zagreb – sauna for relaxation" } },
+  { src: gallerySauna2, alt: { hr: "Najam kuće za djevojačku – sauna unutrašnjost", en: "Event house rental Zagreb – sauna interior" } },
+  { src: galleryBathroom, alt: { hr: "Kuća za proslave najam – kupaona s tušem i kadom", en: "Party house Zagreb – bathroom with shower and tub" } },
+  { src: galleryBedroomLavender, alt: { hr: "Najam kuće za proslave Zagreb – spavaća soba lavanda", en: "House rental Zagreb – lavender themed bedroom" } },
+  { src: galleryBedroomSunset, alt: { hr: "Kuća za zabave najam – spavaća soba zalazak sunca", en: "Party house rental – sunset themed bedroom" } },
+  { src: galleryBedroomFuji, alt: { hr: "Najam prostora za proslave – spavaća soba Fuji", en: "Event house rental – Fuji themed bedroom" } },
+  { src: galleryBedroomBlue, alt: { hr: "Kuća za evente najam Zagreb – plava spavaća soba", en: "Party house rental Zagreb – blue themed bedroom" } },
 ];
 
 const GallerySection = () => {
