@@ -46,10 +46,10 @@ const translations = {
   about: {
     hr: {
       label: "O vili",
-      title1: "Vaš privatni",
-      title2: "raj",
-      title3: "u Zagrebu",
-      desc: "Vila GTI smještena je u mirnom okruženju Dubrave, na adresi Ivanovićeva 47b, Zagreb. Pruža smještaj za do 15 osoba s potpunom privatnošću, luksuznim sadržajima i svime što vam je potrebno za savršenu proslavu ili odmor.",
+      title1: "Kuća za proslave,",
+      title2: "Party kuća",
+      title3: "s bazenom",
+      desc: "Vila GTI smještena je u mirnom okruženju Dubrave, na adresi Ivanovićeva 47b, Zagreb. Najam kuće za proslave okolica Zagreba — idealno za rođendane, momačke i djevojačke večeri, team building i vikend odmor za do 15 osoba.",
       features: ["Veliki bazen", "Sauna", "5 spavaćih soba", "Roštilj & sjenica", "Parking za 8 vozila", "Veliko dvorište"],
       offerTitle: "Što nudimo našim gostima?",
       offers1: ["Kompletno opremljena kuhinja", "Prostrana dnevna soba", "Velika i mala kupaona", "Veliko dvorište sa sjenicom"],
