@@ -2,24 +2,15 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Droplets, Flame, Beef, CircleDot, Target, Trophy, Volume2, Thermometer, CookingPot, Car } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const amenities: { Icon: LucideIcon; title: string; desc: string }[] = [
-  { Icon: Droplets, title: "Bazen", desc: "Veliki vanjski bazen za osvježenje i zabavu" },
-  
-  { Icon: Flame, title: "Sauna", desc: "Sauna za potpunu relaksaciju" },
-  { Icon: Beef, title: "Roštilj", desc: "Prostrani roštilj sa sjenicom" },
-  { Icon: CircleDot, title: "Biljar", desc: "Za zabavu i natjecanje u društvu" },
-  { Icon: Target, title: "Pikado", desc: "Klasična igra za sve generacije" },
-  { Icon: Trophy, title: "Stolni nogomet", desc: "Turnir za zabavu cijele ekipe" },
-  { Icon: Volume2, title: "Ozvučenje", desc: "Kvalitetno ozvučenje za atmosferu" },
-  { Icon: Thermometer, title: "Klima / Grijanje", desc: "Ugodna temperatura cijele godine" },
-  { Icon: CookingPot, title: "Kuhinja", desc: "Potpuno opremljena za pripremu jela" },
-  { Icon: Car, title: "Parking", desc: "Privatni parking za 8 vozila" },
-];
+const icons: LucideIcon[] = [Droplets, Flame, Beef, CircleDot, Target, Trophy, Volume2, Thermometer, CookingPot, Car];
 
 const AmenitiesSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { lang, t } = useLanguage();
+  const a = t.amenities[lang];
 
   return (
     <section id="sadrzaji" className="section-padding bg-card" ref={ref}>
@@ -30,26 +21,29 @@ const AmenitiesSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <p className="text-primary tracking-[0.3em] uppercase text-sm mb-3 font-body">Sadržaji</p>
+          <p className="text-primary tracking-[0.3em] uppercase text-sm mb-3 font-body">{a.label}</p>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground">
-            Sve za <span className="text-gold-gradient italic">savršen</span> boravak
+            {a.title1} <span className="text-gold-gradient italic">{a.title2}</span> {a.title3}
           </h2>
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-          {amenities.map((a, i) => (
-            <motion.div
-              key={a.title}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.4, delay: i * 0.05 }}
-              className="bg-background rounded-xl p-5 text-center hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 border border-border hover:border-primary/20"
-            >
-              <a.Icon className="w-8 h-8 text-primary mx-auto mb-2" />
-              <h3 className="font-display font-bold text-foreground text-sm mb-1">{a.title}</h3>
-              <p className="text-muted-foreground text-xs font-body">{a.desc}</p>
-            </motion.div>
-          ))}
+          {a.items.map((item, i) => {
+            const Icon = icons[i];
+            return (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.4, delay: i * 0.05 }}
+                className="bg-background rounded-xl p-5 text-center hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 border border-border hover:border-primary/20"
+              >
+                <Icon className="w-8 h-8 text-primary mx-auto mb-2" />
+                <h3 className="font-display font-bold text-foreground text-sm mb-1">{item.title}</h3>
+                <p className="text-muted-foreground text-xs font-body">{item.desc}</p>
+              </motion.div>
+            );
+          })}
         </div>
 
         <motion.div
@@ -59,7 +53,7 @@ const AmenitiesSection = () => {
           className="mt-12 text-center"
         >
           <div className="inline-flex flex-wrap justify-center gap-3">
-            {["Rođendani", "Djevojačke večeri", "Momačke večeri", "Obiteljska okupljanja", "Team building", "Vikend odmor"].map((tag) => (
+            {a.tags.map((tag) => (
               <span key={tag} className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-body font-bold">
                 {tag}
               </span>

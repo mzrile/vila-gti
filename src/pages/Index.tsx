@@ -6,8 +6,12 @@ import GallerySection from "@/components/GallerySection";
 import PricingSection from "@/components/PricingSection";
 import RulesSection from "@/components/RulesSection";
 import ContactSection from "@/components/ContactSection";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
+  const { lang, t } = useLanguage();
+  const footerText = t.footer[lang].replace("{year}", new Date().getFullYear().toString());
+
   return (
     <>
       <Navbar />
@@ -22,7 +26,7 @@ const Index = () => {
       </main>
       <footer className="bg-secondary py-6 text-center">
         <p className="text-secondary-foreground/40 font-body text-xs">
-          © {new Date().getFullYear()} Vila s bazenom Deluxe — GTI. Sva prava pridržana.
+          {footerText}
         </p>
       </footer>
     </>

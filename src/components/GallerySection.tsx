@@ -1,5 +1,6 @@
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import galleryVillaFront from "@/assets/gallery-villa-front.jpg";
 import galleryExterior2 from "@/assets/gallery-exterior2.jpg";
 import galleryYard from "@/assets/gallery-yard.jpg";
@@ -16,26 +17,28 @@ import galleryBedroomFuji from "@/assets/gallery-bedroom-fuji.jpeg";
 import galleryBedroomBlue from "@/assets/gallery-bedroom-blue.jpeg";
 
 const images = [
-  { src: galleryVillaFront, alt: "Vila GTI - pročelje" },
-  { src: galleryPoolNight, alt: "Bazen noću s rasvjetom" },
-  { src: galleryExterior2, alt: "Vila GTI - eksterijer" },
-  { src: galleryYard, alt: "Dvorište i zelena površina" },
-  { src: galleryGarden, alt: "Vrt s rasvjetom" },
-  { src: galleryGazebo, alt: "Sjenica s roštiljem" },
-  { src: galleryLivingroom, alt: "Dnevna soba" },
-  { src: gallerySauna, alt: "Sauna" },
-  { src: gallerySauna2, alt: "Sauna - unutrašnjost" },
-  { src: galleryBathroom, alt: "Kupaona s tušem i kadom" },
-  { src: galleryBedroomLavender, alt: "Spavaća soba s motivom lavande" },
-  { src: galleryBedroomSunset, alt: "Spavaća soba s motivom zalaska sunca" },
-  { src: galleryBedroomFuji, alt: "Spavaća soba s motivom planine Fuji" },
-  { src: galleryBedroomBlue, alt: "Spavaća soba s plavim detaljima" },
+  { src: galleryVillaFront, alt: { hr: "Vila GTI - pročelje", en: "Villa GTI - front" } },
+  { src: galleryPoolNight, alt: { hr: "Bazen noću s rasvjetom", en: "Pool at night with lighting" } },
+  { src: galleryExterior2, alt: { hr: "Vila GTI - eksterijer", en: "Villa GTI - exterior" } },
+  { src: galleryYard, alt: { hr: "Dvorište i zelena površina", en: "Yard and green area" } },
+  { src: galleryGarden, alt: { hr: "Vrt s rasvjetom", en: "Garden with lighting" } },
+  { src: galleryGazebo, alt: { hr: "Sjenica s roštiljem", en: "Gazebo with BBQ" } },
+  { src: galleryLivingroom, alt: { hr: "Dnevna soba", en: "Living room" } },
+  { src: gallerySauna, alt: { hr: "Sauna", en: "Sauna" } },
+  { src: gallerySauna2, alt: { hr: "Sauna - unutrašnjost", en: "Sauna - interior" } },
+  { src: galleryBathroom, alt: { hr: "Kupaona s tušem i kadom", en: "Bathroom with shower and tub" } },
+  { src: galleryBedroomLavender, alt: { hr: "Spavaća soba s motivom lavande", en: "Lavender-themed bedroom" } },
+  { src: galleryBedroomSunset, alt: { hr: "Spavaća soba s motivom zalaska sunca", en: "Sunset-themed bedroom" } },
+  { src: galleryBedroomFuji, alt: { hr: "Spavaća soba s motivom planine Fuji", en: "Fuji-themed bedroom" } },
+  { src: galleryBedroomBlue, alt: { hr: "Spavaća soba s plavim detaljima", en: "Blue-themed bedroom" } },
 ];
 
 const GallerySection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const { lang, t } = useLanguage();
+  const g = t.gallery[lang];
 
   return (
     <>
@@ -47,9 +50,9 @@ const GallerySection = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <p className="text-primary tracking-[0.3em] uppercase text-sm mb-3 font-body">Galerija</p>
+            <p className="text-primary tracking-[0.3em] uppercase text-sm mb-3 font-body">{g.label}</p>
             <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground">
-              Zavirite u <span className="text-gold-gradient italic">vilu</span>
+              {g.title1} <span className="text-gold-gradient italic">{g.title2}</span>
             </h2>
           </motion.div>
 
@@ -67,13 +70,13 @@ const GallerySection = () => {
               >
                 <img
                   src={img.src}
-                  alt={img.alt}
+                  alt={img.alt[lang]}
                   className="w-full h-full object-cover aspect-square group-hover:scale-110 transition-transform duration-700"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-colors duration-300 flex items-center justify-center">
                   <span className="text-primary-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body text-sm tracking-wider uppercase">
-                    Povećaj
+                    {g.enlarge}
                   </span>
                 </div>
               </motion.div>
@@ -82,7 +85,6 @@ const GallerySection = () => {
         </div>
       </section>
 
-      {/* Lightbox */}
       <AnimatePresence>
         {selectedImage !== null && (
           <motion.div
@@ -97,7 +99,7 @@ const GallerySection = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               src={images[selectedImage].src}
-              alt={images[selectedImage].alt}
+              alt={images[selectedImage].alt[lang]}
               className="max-w-full max-h-[90vh] object-contain rounded-lg"
             />
             <button
