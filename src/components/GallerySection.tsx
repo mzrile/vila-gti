@@ -11,6 +11,16 @@ import galleryGardenNight from "@/assets/gallery-garden-night.jpeg";
 import galleryPoolNight from "@/assets/gallery-pool-night.jpeg";
 import galleryYardNight from "@/assets/gallery-yard-night.jpeg";
 import galleryBathroom from "@/assets/gallery-bathroom.jpeg";
+import galleryBedroom1 from "@/assets/gallery-bedroom-1.jpeg";
+import galleryBedroom2 from "@/assets/gallery-bedroom-2.jpeg";
+import galleryBedroom3 from "@/assets/gallery-bedroom-3.jpeg";
+import galleryBedroom4 from "@/assets/gallery-bedroom-4.jpeg";
+import galleryBedroom5 from "@/assets/gallery-bedroom-5.jpeg";
+import galleryBedroom6 from "@/assets/gallery-bedroom-6.jpeg";
+import galleryAttic1 from "@/assets/gallery-attic-1.jpeg";
+import galleryAttic2 from "@/assets/gallery-attic-2.jpeg";
+import galleryLivingroom from "@/assets/gallery-livingroom.jpeg";
+import gallerySauna from "@/assets/gallery-sauna.jpeg";
 
 const images = [
   { src: galleryVillaFront, alt: { hr: "Kuća za proslave najam Zagreb – pročelje vile s bazenom", en: "Party house rental Zagreb – villa front view" } },
@@ -22,6 +32,16 @@ const images = [
   { src: galleryGardenNight, alt: { hr: "Najam prostora za proslave – osvijetljeno dvorište noću", en: "Party house Zagreb – illuminated yard at night" } },
   { src: galleryYardNight, alt: { hr: "Kuća za evente najam Zagreb – veliko dvorište noću", en: "Event house rental Zagreb – large yard at night" } },
   { src: galleryYard, alt: { hr: "Najam kuće za djevojačku – veliko zeleno dvorište", en: "Bachelorette party house rental – large green yard" } },
+  { src: galleryLivingroom, alt: { hr: "Najam kuće za proslave Zagreb – dnevni boravak s TV-om", en: "Party house rental Zagreb – living room with TV" } },
+  { src: galleryBedroom1, alt: { hr: "Kuća za proslave najam – spavaća soba s klimom i bračnim krevetom", en: "Party house rental – bedroom with AC and double bed" } },
+  { src: galleryBedroom2, alt: { hr: "Najam kuće za rođendan – moderna spavaća soba s ogledalom", en: "Birthday house rental – modern bedroom with mirror" } },
+  { src: galleryBedroom3, alt: { hr: "Kuća za zabave najam – prostrana spavaća soba s bračnim krevetom", en: "Event house rental – spacious bedroom with double bed" } },
+  { src: galleryBedroom4, alt: { hr: "Najam kuće za momačku – spavaća soba s king size krevetom", en: "Bachelor party house rental – bedroom with king size bed" } },
+  { src: galleryBedroom5, alt: { hr: "Najam kuće za djevojačku – romantična spavaća soba", en: "Bachelorette party house rental – romantic bedroom" } },
+  { src: galleryBedroom6, alt: { hr: "Party house Zagreb – dizajnerska spavaća soba sa zlatnim zidom", en: "Party house Zagreb – designer bedroom with gold wall" } },
+  { src: galleryAttic1, alt: { hr: "Najam prostora za proslave – potkrovlje s krevetom i sofom", en: "Event space rental – attic bedroom with sofa" } },
+  { src: galleryAttic2, alt: { hr: "Kuća za evente najam – potkrovlje s bračnim krevetom", en: "Event house rental – attic room with double bed" } },
+  { src: gallerySauna, alt: { hr: "Party house rental Zagreb – privatna finska sauna", en: "Party house rental Zagreb – private Finnish sauna" } },
   { src: galleryBathroom, alt: { hr: "Kuća za zabave najam – luksuzna kupaona s tušem i kadom", en: "House rental Zagreb – luxury bathroom with shower and tub" } },
 ];
 
