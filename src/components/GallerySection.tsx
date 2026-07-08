@@ -2,35 +2,27 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import galleryVillaFront from "@/assets/gallery-villa-front.jpg";
-import galleryExterior2 from "@/assets/gallery-exterior2.jpg";
 import galleryYard from "@/assets/gallery-yard.jpg";
+import galleryPoolWide from "@/assets/gallery-pool-wide.jpeg";
+import galleryPool from "@/assets/gallery-pool.jpeg";
+import galleryPoolForest from "@/assets/gallery-pool-forest.jpeg";
+import galleryGazeboNight from "@/assets/gallery-gazebo-night.jpeg";
+import galleryGardenNight from "@/assets/gallery-garden-night.jpeg";
 import galleryPoolNight from "@/assets/gallery-pool-night.jpeg";
-import galleryGarden from "@/assets/gallery-garden.jpeg";
-import galleryGazebo from "@/assets/gallery-gazebo.jpg";
-import galleryLivingroom from "@/assets/gallery-livingroom.jpeg";
-import gallerySauna from "@/assets/gallery-sauna.jpeg";
-import gallerySauna2 from "@/assets/gallery-sauna2.jpeg";
+import galleryYardNight from "@/assets/gallery-yard-night.jpeg";
 import galleryBathroom from "@/assets/gallery-bathroom.jpeg";
-import galleryBedroomLavender from "@/assets/gallery-bedroom-lavender.jpeg";
-import galleryBedroomSunset from "@/assets/gallery-bedroom-sunset.jpeg";
-import galleryBedroomFuji from "@/assets/gallery-bedroom-fuji.jpeg";
-import galleryBedroomBlue from "@/assets/gallery-bedroom-blue.jpeg";
 
 const images = [
-  { src: galleryVillaFront, alt: { hr: "Kuća za proslave najam Zagreb – pročelje vile s bazenom", en: "Party house rental Zagreb – villa front view with pool" } },
-  { src: galleryPoolNight, alt: { hr: "Najam kuće za proslave – bazen noću s rasvjetom", en: "Event house rental – pool at night with lighting" } },
-  { src: galleryExterior2, alt: { hr: "Kuća za zabave najam – eksterijer vile GTI Zagreb", en: "House rental Zagreb – villa GTI exterior" } },
-  { src: galleryYard, alt: { hr: "Najam prostora za proslave – veliko dvorište vile", en: "Party house Zagreb – large villa yard" } },
-  { src: galleryGarden, alt: { hr: "Kuća za evente najam – vrt s rasvjetom", en: "Event house rental – garden with lighting" } },
-  { src: galleryGazebo, alt: { hr: "Najam kuće za rođendan – sjenica s roštiljem", en: "Party house rental – gazebo with BBQ area" } },
-  { src: galleryLivingroom, alt: { hr: "Kuća za proslave okolica Zagreba – prostrana dnevna soba", en: "House rental Zagreb – spacious living room" } },
-  { src: gallerySauna, alt: { hr: "Najam kuće za momačku – sauna za relaksaciju", en: "Party house rental Zagreb – sauna for relaxation" } },
-  { src: gallerySauna2, alt: { hr: "Najam kuće za djevojačku – sauna unutrašnjost", en: "Event house rental Zagreb – sauna interior" } },
-  { src: galleryBathroom, alt: { hr: "Kuća za proslave najam – kupaona s tušem i kadom", en: "Party house Zagreb – bathroom with shower and tub" } },
-  { src: galleryBedroomLavender, alt: { hr: "Najam kuće za proslave Zagreb – spavaća soba lavanda", en: "House rental Zagreb – lavender themed bedroom" } },
-  { src: galleryBedroomSunset, alt: { hr: "Kuća za zabave najam – spavaća soba zalazak sunca", en: "Party house rental – sunset themed bedroom" } },
-  { src: galleryBedroomFuji, alt: { hr: "Najam prostora za proslave – spavaća soba Fuji", en: "Event house rental – Fuji themed bedroom" } },
-  { src: galleryBedroomBlue, alt: { hr: "Kuća za evente najam Zagreb – plava spavaća soba", en: "Party house rental Zagreb – blue themed bedroom" } },
+  { src: galleryVillaFront, alt: { hr: "Kuća za proslave najam Zagreb – pročelje vile s bazenom", en: "Party house rental Zagreb – villa front view" } },
+  { src: galleryPoolWide, alt: { hr: "Najam kuće za proslave – bazen s ležaljkama i suncobranima", en: "Party house rental Zagreb – pool with loungers and umbrellas" } },
+  { src: galleryPool, alt: { hr: "Kuća s bazenom najam Zagreb – veliki vanjski bazen", en: "House with pool rental Zagreb – large outdoor pool" } },
+  { src: galleryPoolForest, alt: { hr: "Najam kuće za rođendan – bazen s pogledom na šumu", en: "Party house rental – pool with forest view" } },
+  { src: galleryPoolNight, alt: { hr: "Party house rental Zagreb – bazen i dvorište noću", en: "Party house rental Zagreb – pool and yard at night" } },
+  { src: galleryGazeboNight, alt: { hr: "Najam kuće za momačku – sjenica s roštiljem noću", en: "Event house rental – gazebo with BBQ at night" } },
+  { src: galleryGardenNight, alt: { hr: "Najam prostora za proslave – osvijetljeno dvorište noću", en: "Party house Zagreb – illuminated yard at night" } },
+  { src: galleryYardNight, alt: { hr: "Kuća za evente najam Zagreb – veliko dvorište noću", en: "Event house rental Zagreb – large yard at night" } },
+  { src: galleryYard, alt: { hr: "Najam kuće za djevojačku – veliko zeleno dvorište", en: "Bachelorette party house rental – large green yard" } },
+  { src: galleryBathroom, alt: { hr: "Kuća za zabave najam – luksuzna kupaona s tušem i kadom", en: "House rental Zagreb – luxury bathroom with shower and tub" } },
 ];
 
 const GallerySection = () => {
