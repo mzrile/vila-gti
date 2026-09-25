@@ -32,6 +32,7 @@ const PricingSection = () => {
             <p className="text-muted-foreground font-body text-sm uppercase tracking-wider mb-2">{p.upTo10}</p>
             <div className="font-display text-5xl font-bold text-foreground mb-2">600€</div>
             <p className="text-muted-foreground font-body text-sm">{p.perNight}</p>
+            <p className="text-muted-foreground font-body text-xs mt-2">{p.anchoredPrice} <span className="text-foreground font-semibold">600 €</span></p>
           </motion.div>
 
           <motion.div
@@ -46,6 +47,7 @@ const PricingSection = () => {
             <p className="text-primary-foreground/80 font-body text-sm uppercase tracking-wider mb-2">{p.upTo15}</p>
             <div className="font-display text-5xl font-bold text-primary-foreground mb-2">700€</div>
             <p className="text-primary-foreground/80 font-body text-sm">{p.perNight}</p>
+            <p className="text-primary-foreground/70 font-body text-xs mt-2">{p.anchoredPrice} <span className="text-primary-foreground font-semibold">700 €</span></p>
           </motion.div>
         </div>
 
