@@ -28,6 +28,10 @@ const Index = () => {
         <p className="text-secondary-foreground/40 font-body text-xs">
           {footerText}
         </p>
+        <p className="mt-2 font-body text-xs space-x-4">
+          <a href="/cjenik.csv" className="text-secondary-foreground/60 hover:text-secondary-foreground underline">Cjenik (CSV)</a>
+          <a href="/cjenik-arhiva" className="text-secondary-foreground/60 hover:text-secondary-foreground underline">Arhiva cjenika</a>
+        </p>
       </footer>
     </>
   );
